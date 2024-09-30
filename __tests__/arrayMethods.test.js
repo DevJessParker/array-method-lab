@@ -1,12 +1,12 @@
 const {
     swapFirstAndLast,
-    // squareFirstIndex,
-    // getLongerArray,
-    // arrayHasValue,
-    // getLastIndexOf,
+    squareFirstIndex,
+    getLongerArray,
+    arrayHasValue,
+    getLastIndexOf,
     // getNumberOfTimes,
-    // findAboveFreezing,
-    // returnString,
+    findAboveFreezing,
+    returnString,
     // sortArrayBasedOnNumber,
     // concatArrays,
     // popAndShift,
@@ -17,7 +17,7 @@ const {
     // getPaginationArray,
     // sparseToDense,
     // findAndConvertTemp
-} = require('../arrayMethods.js');
+} = require('../src/arrayMethods.js');
 
 describe('JavaScript Array Methods Tests', () => {
 
@@ -30,34 +30,34 @@ describe('JavaScript Array Methods Tests', () => {
     });
 
     // // Test for squareFirstIndex
-    // test('squareFirstIndex should return the square of the first element in the array', () => {
-    //     expect(squareFirstIndex([4, 2, 3])).toBe(16);
-    //     expect(squareFirstIndex(['a', 2])).toBe('Invalid input');
-    //     expect(squareFirstIndex([])).toBe('Invalid input');
-    //     expect(squareFirstIndex([true])).toBe('Invalid input');
-    // });
+    test('squareFirstIndex should return the square of the first element in the array', () => {
+        expect(squareFirstIndex([4, 2, 3])).toBe(16);
+        expect(squareFirstIndex(['a', 2])).toBe('Invalid input');
+        expect(squareFirstIndex([])).toBe('Invalid input');
+        expect(squareFirstIndex([true])).toBe('Invalid input');
+    });
 
     // // Test for getLongerArray
-    // test('getLongerArray should return the longer array', () => {
-    //     expect(getLongerArray([1, 2], [1, 2, 3])).toEqual([1, 2, 3]);
-    //     expect(getLongerArray([5, 4, 3], [1])).toEqual([5, 4, 3]);
-    //     expect(getLongerArray([1], [])).toEqual([1]);
-    //     expect(getLongerArray('not an array', [1])).toBe('Invalid input');
-    // });
+    test('getLongerArray should return the longer array', () => {
+        expect(getLongerArray([1, 2], [1, 2, 3])).toEqual([1, 2, 3]);
+        expect(getLongerArray([5, 4, 3], [1])).toEqual([5, 4, 3]);
+        expect(getLongerArray([1], [])).toEqual([1]);
+        expect(getLongerArray('not an array', [1])).toBe('Invalid input');
+    });
 
     // // Test for arrayHasValue
-    // test('arrayHasValue should return true if value exists in the array', () => {
-    //     expect(arrayHasValue(2, [1, 2, 3])).toBe(true);
-    //     expect(arrayHasValue(4, [1, 2, 3])).toBe(false);
-    //     expect(arrayHasValue(2, 'not an array')).toBe('Invalid input');
-    // });
+    test('arrayHasValue should return true if value exists in the array', () => {
+        expect(arrayHasValue(2, [1, 2, 3])).toBe(true);
+        expect(arrayHasValue(4, [1, 2, 3])).toBe(false);
+        expect(arrayHasValue(2, 'not an array')).toBe('Invalid input');
+    });
 
     // // Test for getLastIndexOf
-    // test('getLastIndexOf should return the last index of a value', () => {
-    //     expect(getLastIndexOf([1, 2, 3, 2], 2)).toBe(3);
-    //     expect(getLastIndexOf([1, 2, 3], 4)).toBe(-1);
-    //     expect(getLastIndexOf('not an array', 2)).toBe('Invalid input');
-    // });
+    test('getLastIndexOf should return the last index of a value', () => {
+        expect(getLastIndexOf([1, 2, 3, 2], 2)).toBe(3);
+        expect(getLastIndexOf([1, 2, 3], 4)).toBe(-1);
+        expect(getLastIndexOf('not an array', 2)).toBe('Invalid input');
+    });
 
     // // Test for getNumberOfTimes
     // test('getNumberOfTimes should return the count of how many times a string appears', () => {
@@ -68,19 +68,19 @@ describe('JavaScript Array Methods Tests', () => {
     // });
 
     // // Test for findAboveFreezing
-    // test('findAboveFreezing should return the first temperature above freezing', () => {
-    //     expect(findAboveFreezing([30, 32, 35, 40])).toBe(35);
-    //     expect(findAboveFreezing([20, 10, 5])).toBe(undefined);
-    //     expect(findAboveFreezing('not an array')).toBe('Invalid input');
-    // });
+    test('findAboveFreezing should return the first temperature above freezing', () => {
+        expect(findAboveFreezing([30, 32, 35, 40])).toBe(35);
+        expect(findAboveFreezing([20, 10, 5])).toBe(undefined);
+        expect(findAboveFreezing('not an array')).toBe('Invalid input');
+    });
 
     // // Test for returnString
-    // test('returnString should return the array as a string with an ampersand as the separator', () => {
-    //     expect(returnString([1, 2, 3])).toBe('1&2&3');
-    //     expect(returnString(['a', 'b', 'c'])).toBe('a&b&c');
-    //     expect(returnString([])).toBe('');
-    //     expect(returnString('Potato')).toBe('Invalid input');
-    // });
+    test('returnString should return the array as a string with an ampersand as the separator', () => {
+        expect(returnString([1, 2, 3])).toBe('1&2&3');
+        expect(returnString(['a', 'b', 'c'])).toBe('a&b&c');
+        expect(returnString([])).toBe('');
+        expect(returnString('Potato')).toBe('Invalid input');
+    });
 
 
     // // Test for sortArrayBasedOnNumber
