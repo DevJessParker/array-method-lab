@@ -5,19 +5,41 @@
 // Swap the values of the first and last index without using array destructuring.
 // Return the updated array
 
-
-
+function swapFirstAndLast(swapArray) {
+    if ((Array.isArray(swapArray) === false) || (swapArray.length <= 1))  {
+        return "Invalid input";
+    }
+    if (Array.isArray(swapArray) && swapArray.length > 1) {
+        let temp = swapArray[0];
+        swapArray[0] = swapArray[swapArray.length-1];
+        swapArray[swapArray.length-1] = temp;
+        return swapArray;
+    }
+    }
 
 
 // Write a function called squareFirstIndex that takes in an array as a parameter.
 // Return the square of a number held at the first index.
-
-
-
-
+function squareFirstIndex(squareArray) {
+    if ((Array.isArray(squareArray) === false) || (squareArray.length <= 1) || (typeof(squareArray[0]) == "string")) {
+        return "Invalid input";
+    }
+    if (Array.isArray(squareArray) && squareArray.length > 1) {
+        return squareArray[0] * squareArray[0];
+    }
+}
 
 // Write a function called getLongerArray that takes in two arrays as parameters.
 // Use a ternary operator and return the array that is longer.
+function getLongerArray(arr1, arr2) {
+    if ((Array.isArray(arr1) === false) || (Array.isArray(arr2) === false))  {
+        return "Invalid input";
+    }
+    let longerString = (arr1.length > arr2.length) ? arr1 : arr2;
+    if (Array.isArray(arr1) && Array.isArray(arr2)) {
+        return longerString; 
+    }
+}
 
 
 
@@ -26,7 +48,13 @@
 // Write a function called arrayHasValue that takes in a value and an array.
 // Return a boolean if the value exists in the array.
 
-
+function arrayHasValue(value, arr) {
+    if ((Array.isArray(arr) === false) || (arr.length <= 1) || (typeof(value) != "number")) {
+        return "Invalid input";
+    } else if ((Array.isArray(arr)) && (arr.length > 1) && (typeof(value) == "number")) {
+        return arr.includes(value);
+    }
+}
 
 
 
@@ -36,7 +64,15 @@
 // Write a function called getLastIndexOf that takes an array and a value as parameters.
 // Return the highest index number where that value was found (ie the furthest point it exists in the array)
 
+function getLastIndexOf(arr, value) {
+    if ((Array.isArray(arr) === false) || (arr.length <= 1) || (typeof(value) != "number")) {
+        return "Invalid input";
+    } else if ((Array.isArray(arr)) && (arr.length > 1) && (typeof(value) == "number")) {
+        return arr.lastIndexOf(value);
+    }
 
+    
+}
 
 
 
@@ -169,6 +205,12 @@
 // Find the first temperature in the array that exceeds the input parameter.
 // Return the string literal `Temperature was ----- degrees Celcius on date ------."
 
-
+module.exports = {
+    swapFirstAndLast,
+    squareFirstIndex,
+    getLongerArray,
+    arrayHasValue,
+    getLastIndexOf
+};
 
 
