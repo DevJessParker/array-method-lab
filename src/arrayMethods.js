@@ -5,7 +5,17 @@
 // Swap the values of the first and last index without using array destructuring.
 // Return the updated array
 
+function swapFirstAndLast(array) {
+    if ((typeof(array) != 'object') || (array.length <= 1)) {
+        return "Invalid input";
+    }
+    let firstValue = array.shift();
+    let lastValue = array.pop();
+    array.unshift(lastValue);
+    array.push(firstValue);
+    return array;
 
+}
 
 
 
