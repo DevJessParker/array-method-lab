@@ -17,10 +17,8 @@ function swapFirstAndLast(array) {
 
 }
 
-
 // Write a function called squareFirstIndex that takes in an array as a parameter.
 // Return the square of a number held at the first index.
-
 
 function squareFirstIndex(array) {
     if ((typeof(array) != 'object') || (typeof(array[0]) != 'number') || (array.length == 0)) {
@@ -29,7 +27,6 @@ function squareFirstIndex(array) {
     let squareOfFirstElement = Math.pow(array[0], 2);
     return squareOfFirstElement
 }
-
 
 // Write a function called getLongerArray that takes in two arrays as parameters.
 // Use a ternary operator and return the array that is longer.
@@ -42,7 +39,6 @@ function getLongerArray(firstArray, secondArray) {
     return longerArray;
 }
 
-
 // Write a function called arrayHasValue that takes in a value and an array.
 // Return a boolean if the value exists in the array.
 
@@ -53,11 +49,15 @@ function arrayHasValue(value, array) {
     return array.includes(value);
 }
 
-
 // Write a function called getLastIndexOf that takes an array and a value as parameters.
 // Return the highest index number where that value was found (ie the furthest point it exists in the array)
 
-
+function getLastIndexOf(array, value) {
+    if ((typeof(array) != 'object') || (array.length == 0)) {
+        return "Invalid input";
+    }
+    return array.lastIndexOf(value);
+}
 
 
 
@@ -195,6 +195,7 @@ module.exports = {
     squareFirstIndex,
     getLongerArray,
     arrayHasValue,
+    getLastIndexOf,
 };
 
 
