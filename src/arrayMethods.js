@@ -59,18 +59,21 @@ function getLastIndexOf(array, value) {
     return array.lastIndexOf(value);
 }
 
-
-
-
-
 // Write a function called getNumberOfTimes that takes in an array and a string.
 // Return a count of how many times the string exists in the array.
 
-
-
-
-
-
+function getNumberOfTimes(array, string) {
+    if (typeof(array) != 'object') {
+        return "Invalid input";
+    }
+    let count = 0;
+    for (let i = 0; i < array.length; ++i) {
+        if (array[i] == string) {
+            count++;
+        }
+    }
+    return count;
+}
 
 // Write a function called findAboveFreezing that takes in an array
 // Return a string literal that says "Temperature found was ---- degrees Farenheit."
@@ -196,6 +199,7 @@ module.exports = {
     getLongerArray,
     arrayHasValue,
     getLastIndexOf,
+    getNumberOfTimes,
 };
 
 
