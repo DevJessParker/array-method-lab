@@ -43,15 +43,15 @@ function getLongerArray(firstArray, secondArray) {
 }
 
 
-
 // Write a function called arrayHasValue that takes in a value and an array.
 // Return a boolean if the value exists in the array.
 
-
-
-
-
-
+function arrayHasValue(value, array) {
+    if ((typeof(array) != 'object') || (array.length == 0)) {
+        return "Invalid input";
+    }
+    return array.includes(value);
+}
 
 
 // Write a function called getLastIndexOf that takes an array and a value as parameters.
@@ -194,7 +194,7 @@ module.exports = {
     swapFirstAndLast,
     squareFirstIndex,
     getLongerArray,
-
+    arrayHasValue,
 };
 
 
