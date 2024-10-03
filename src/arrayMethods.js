@@ -90,15 +90,15 @@ function findAboveFreezing(array) {
     }       
 }
 
-
 // Write a function called returnString that takes an array as a parameter.
 // Return the array as a string with an ampersand as the separator.
 
-
-
-
-
-
+function returnString(array) {
+    if (typeof(array) != 'object') {
+        return "Invalid input";
+    }
+    return array.join('&');
+}
 
 // Write a function called sortArrayBasedOnNumber that takes in an array and a number.
 // Arrays must only contain one data type.
@@ -207,6 +207,8 @@ module.exports = {
     getLastIndexOf,
     getNumberOfTimes,
     findAboveFreezing,
+    returnString,
+
 };
 
 
