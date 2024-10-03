@@ -169,6 +169,8 @@
 // Find the first temperature in the array that exceeds the input parameter.
 // Return the string literal `Temperature was ----- degrees Celcius on date ------."
 
-
+module.exports = {
+    swapFirstAndLast
+};
 
 
